@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<form action="work" id="frm" method="post">
+이름 : <input type="text" size="20" name="name" id="_name" placeholder="필수입력"><br>
+연령대 : 
+<select name="ages">
+	<option value="10대" selected>10대</option>
+	<option value="20대">20대</option>
+	<option value="30대">30대</option>
+	<option value="40대">40대</option>
+	<option value="50대">50대</option>
+</select>
+<br>
+성별 : 
+<input type="radio" name="sex" value="남자" checked>남자
+<input type="radio" name="sex" value="여자">여자
+<br>
+취미 : 
+<input type="checkbox" name="hobby" value="운동" checked>운동 
+<input type="checkbox" name="hobby" value="독서">독서 
+<input type="checkbox" name="hobby" value="수면">수면
+<br>
+<button type="button" id="btn">확인</button>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#btn").click(function() {
+		if($("#_name").val() == ""){
+			alert("이름을 꼭 입력하세요");
+			return;
+		}
+		
+		$("#frm").submit();
+	});
+});
+
+</script>
+
+</body>
+</html>

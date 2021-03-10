@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>앙케이트 조사</h1>
+
+<form action="hello" id="frm" method="post">
+
+<table>
+<tr>
+	<td>이름</td>
+	<td><input type="text" id="_name" name="name" size="20" placeholder="이름"></td>
+</tr>
+<tr>
+	<td>나이</td>
+	<td><input type="text" name="age" value="24"></td>
+</tr>
+<tr>
+	<td>좋아하는 과일?</td>
+	<td>
+		<select name="fruit" multiple="multiple">
+			<option value="사과" selected>apple</option>
+			<option value="배">pear</option>
+			<option value="바나나">banana</option>
+		</select>
+	</td>
+</tr>
+</table>
+<!-- <input type="submit" value="송신"> -->
+<button type="button" id="btn">송신</button>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#btn").click(function() {
+		
+		//검사
+		if ( $("#_name").val() == "" ) {
+			alert("이름 입력필요");
+			return;
+		}
+		
+		$("#frm").submit();
+	});
+});
+</script>
+
+</body>
+</html>
